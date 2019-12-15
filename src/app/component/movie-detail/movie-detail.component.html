@@ -1,0 +1,27 @@
+<div *ngIf="movie">
+  <div class="movie-backdrop" [ngStyle]="{ 'background-image': 'url(' + movie.backdrop + ')' }"></div>
+  <div class="container">
+    <div class="movie-data row">
+      <div class="col-md-4">
+        <div class="movie-poster">
+          <img class="img-fluid" src="{{ movie.poster }}" alt="{{ movie.title }}" />
+        </div>
+      </div>
+      <div class="col-md-8">
+        <h2 class="movie-title">{{ movie.title }}</h2>
+        <div>
+          <br/>
+          <h4>Available Slots : {{ slot }}</h4><br/>
+          <form #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.slotsvalue)">
+            <label><b>Enter Total Seats</b></label>&nbsp;
+            <input style="width: 5%; text-align: center;" name="slotsvalue" maxlength="1" required ngModel>&nbsp;
+            <button class="btn" type="submit">Book Now</button>
+            <div *ngIf="showErrorMessage">
+              <h4>Enter Valid Seat Number</h4>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

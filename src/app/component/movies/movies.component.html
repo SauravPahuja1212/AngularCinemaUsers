@@ -1,0 +1,13 @@
+<div>
+  <h3 style="padding-left: 65px; margin-top: 20px;">
+  Theaters Nearby
+  </h3>
+</div>
+<div class="container py-5">
+  <ul class="movielist-filters">
+    <li *ngFor="let theater of lstTheaters" [class.selected]="theater.theaterId == selectedTheaterId">
+      <a href="javascript:void(0)" (click)="changeFilter(theater.theaterId)">{{theater.theaterName}}</a>
+    </li>
+  </ul>
+  <app-movies-list [filterDate]="selectedDate"></app-movies-list>
+</div>

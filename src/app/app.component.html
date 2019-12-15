@@ -1,0 +1,22 @@
+<header class="header">
+  <div class="container">
+    <div class="navbar navbar-expand-lg navbar-dark">
+      <a routerLink="/" ><h2 class="navbar-text">Book Cinema</h2></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbar-menu">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a routerLink="/movies" class="nav-link"><h4>User</h4></a>
+            <a routerLink="/userhistory" class="nav-link"><h4>User History</h4></a>
+          </li>
+          <!--<li class="nav-item">
+            <a routerLink="/admin" class="nav-link">Admin</a>
+          </li>-->
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+  <main id="main" class="site-main main">
+    <router-outlet></router-outlet>
+  </main>

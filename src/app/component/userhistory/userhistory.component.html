@@ -1,0 +1,22 @@
+<div class="col-md-6">
+  <h2 style="margin: auto"> User History Details</h2>
+  <br/>
+  <table class="table table-striped">
+    <thead style="background:white">
+    <tr>
+      <th>Theatre Name</th>
+      <th>Movies</th>
+      <th>Tickets</th>
+      <th>Show Time</th>
+    </tr>
+    </thead>
+    <tbody style="background:white">
+    <tr *ngFor="let UserHistory of UserHistorys">
+      <td>{{UserHistory.theaterName}}</td>
+      <td>{{UserHistory.movieName}}</td>
+      <td>{{UserHistory.tickets}}</td>
+      <td>{{UserHistory.showTime}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
